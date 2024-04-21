@@ -16,6 +16,7 @@ export class SerieComponent implements OnInit {
   getSeries(){
     this.serieServie.getSeries().subscribe(series => {
       this.series = series;
+      this.promedioTemporadas(series);
       });
   }
   
@@ -25,7 +26,8 @@ export class SerieComponent implements OnInit {
         let serie: Serie= series[index];
         totalTemporadas+=serie.seasons;
     }
-    this.promedio= totalTemporadas/series.length;
+    this.promedio=totalTemporadas/series.length;
+
 }
 
   ngOnInit() {

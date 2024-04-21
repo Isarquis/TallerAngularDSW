@@ -2,7 +2,7 @@
 
   <div class="container-fluid">
     <div class="col-6">
-      <table class="table">
+      <table class="table table-bordered, table-striped">
         <thead>
           <tr>
             <th class="h4">#</th>
@@ -17,7 +17,7 @@
               <dd>{{s.id}}</dd>
             </td>
             <td>
-              <dd>{{s.name}}</dd>
+              <dd class="nombre">{{s.name}}</dd>
             </td>
             <td>
               <dd>{{s.channel}}</dd>
@@ -26,13 +26,11 @@
               <dd>{{s.seasons}}</dd>
             </td>
         </tr>
-        <tr> <th class="h4">Promedio</th>
-          <dd>
-            {{promedio}}
-          </dd>
-        </tr>
         </tbody>
       </table>
+       
+      <dd> Seasons Average:{{promedio}}</dd>
+      
     </div>
   </div>
 
